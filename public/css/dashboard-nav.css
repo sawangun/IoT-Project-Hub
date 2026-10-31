@@ -1,0 +1,706 @@
+/* =====================================================
+   IoT PROJECT HUB — NAVBAR PENGGUNA
+   File: public/css/dashboard-nav.css
+   ===================================================== */
+
+/* ---------- HEADER ---------- */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7ebf2;
+    box-shadow: 0 2px 10px rgba(25, 48, 85, 0.04);
+}
+
+/* ---------- NAVBAR CONTAINER ---------- */
+
+.app-header .nav-wrap {
+    width: calc(100% - 48px);
+    max-width: 1320px;
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* ---------- LOGO ---------- */
+
+.app-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+
+    color: #172b3a;
+    text-decoration: none;
+}
+
+.app-header .brand-mark {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: #1554d1;
+    color: #ffffff;
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.app-header .brand-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1.15;
+}
+
+.app-header .brand-name strong {
+    color: #263746;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -0.35px;
+}
+
+.app-header .brand-name small {
+    color: #8793a2;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ---------- NAVIGATION MENU ---------- */
+
+.app-header .user-nav-menu {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(10px, 1.2vw, 19px);
+}
+
+/* Semua link dan tombol navbar */
+
+.app-header .nav-link,
+.app-header .dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 8px 0;
+    border: none;
+    background: transparent;
+
+    color: #596777;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.app-header .nav-link:hover,
+.app-header .dropdown-trigger:hover {
+    color: #1554d1;
+}
+
+.app-header .nav-link.active {
+    color: #1554d1;
+    font-weight: 700;
+}
+
+/* ---------- DROPDOWN ---------- */
+
+.app-header .nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.app-header .chevron {
+    color: #8995a4;
+    font-size: 13px;
+    line-height: 1;
+}
+
+/* Panel dropdown */
+
+.app-header .dropdown-panel {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -12px;
+    z-index: 1100;
+
+    min-width: 200px;
+    padding: 7px;
+
+    background: #ffffff;
+    border: 1px solid #e8edf4;
+    border-radius: 11px;
+    box-shadow: 0 12px 32px rgba(24, 43, 74, 0.12);
+}
+
+.app-header .nav-dropdown.is-open > .dropdown-panel {
+    display: block;
+}
+
+.app-header .dropdown-panel a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 7px;
+
+    color: #4b5b6c;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.app-header .dropdown-panel a:hover {
+    color: #1554d1;
+    background: #eff5ff;
+}
+
+.app-header .dropdown-panel > strong {
+    display: block;
+    padding: 10px 12px;
+
+    color: #25384a;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.app-header .dropdown-panel .dropdown-empty {
+    margin: 0;
+    padding: 10px 12px;
+
+    color: #8290a0;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Dropdown yang muncul di kanan */
+
+.app-header .dropdown-panel.dropdown-right {
+    right: 0;
+    left: auto;
+}
+
+/* ---------- SEARCH BAR ---------- */
+
+.app-header .nav-search {
+    flex: 1 1 175px;
+    min-width: 130px;
+    max-width: 245px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+    padding: 8px 10px;
+
+    background: #f8fafc;
+    border: 1px solid #e1e7ef;
+    border-radius: 10px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.app-header .nav-search:focus-within {
+    background: #ffffff;
+    border-color: #7da5f8;
+    box-shadow: 0 0 0 3px rgba(21, 84, 209, 0.09);
+}
+
+.app-header .nav-search > span {
+    flex-shrink: 0;
+    color: #8795a5;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.app-header .nav-search input {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #334155;
+    font-family: inherit;
+    font-size: 11px;
+}
+
+.app-header .nav-search input::placeholder {
+    color: #97a2b1;
+    opacity: 1;
+}
+
+.app-header .nav-search input::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+.app-header .nav-search kbd {
+    flex-shrink: 0;
+    padding: 4px 6px;
+
+    border: 1px solid #dfe5ed;
+    border-radius: 5px;
+    background: #ffffff;
+
+    color: #778598;
+    font-family: inherit;
+    font-size: 9px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* ---------- NOTIFICATION & SAVED ---------- */
+
+.app-header .nav-icon {
+    position: relative;
+    flex-shrink: 0;
+
+    width: 28px;
+    height: 34px;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+
+    color: #536579;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.app-header .nav-icon:hover {
+    background: #f0f5ff;
+    color: #1554d1;
+}
+
+/* Titik notifikasi */
+
+.app-header .notification-dot {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #e5484d;
+    border: 1.5px solid #ffffff;
+    border-radius: 50%;
+}
+
+/* ---------- USER PROFILE ---------- */
+
+.app-header .profile-dropdown {
+    flex-shrink: 0;
+}
+
+.app-header .profile-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 3px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.app-header .profile-trigger:hover {
+    background: #f7f9fc;
+}
+
+/* Foto profil sementara berbentuk inisial */
+
+.app-header .profile-avatar {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+    background: #e2eaff;
+
+    color: #2455bd;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* Nama dan status pengguna */
+
+.app-header .profile-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.app-header .profile-copy strong {
+    color: #344556;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.app-header .profile-copy small {
+    color: #8a96a5;
+    font-size: 9px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Hilangkan panah di samping profil */
+
+.app-header .profile-trigger > .chevron {
+    display: none;
+}
+
+/* ---------- MOBILE TOGGLE ---------- */
+
+.app-header .nav-toggle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: #ffffff;
+
+    cursor: pointer;
+}
+
+.app-header .nav-toggle span {
+    display: block;
+    width: 17px;
+    height: 2px;
+    border-radius: 2px;
+    background: #34465b;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1150px) {
+    .app-header .nav-wrap {
+        gap: 16px;
+    }
+
+    .app-header .user-nav-menu {
+        gap: 11px;
+    }
+
+    .app-header .brand-name strong {
+        font-size: 12px;
+    }
+
+    .app-header .nav-link,
+    .app-header .dropdown-trigger {
+        font-size: 11px;
+    }
+
+    .app-header .nav-search {
+        max-width: 195px;
+        min-width: 115px;
+    }
+
+    .app-header .profile-copy {
+        display: none;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 850px) {
+    .app-header .nav-wrap {
+        position: relative;
+        width: calc(100% - 32px);
+        min-height: 64px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .app-header .nav-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .app-header .user-nav-menu {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 0;
+
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+
+        padding: 12px 0 4px;
+        border-top: 1px solid #edf0f5;
+    }
+
+    .app-header .user-nav-menu.is-open {
+        display: flex;
+    }
+
+    .app-header .user-nav-menu .nav-link,
+    .app-header .user-nav-menu .dropdown-trigger {
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 34px;
+        padding: 6px 2px;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+    .app-header .user-nav-menu .nav-dropdown {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .app-header .user-nav-menu .dropdown-panel {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        margin-top: 4px;
+
+        border-radius: 9px;
+        box-shadow: none;
+    }
+
+    .app-header .user-nav-menu .nav-search {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        min-height: 40px;
+        box-sizing: border-box;
+    }
+
+    .app-header .user-nav-menu .nav-icon {
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 2px;
+    }
+
+    .app-header .user-nav-menu .icon-dropdown {
+        flex-direction: column;
+    }
+
+    .app-header .user-nav-menu .profile-dropdown {
+        align-items: stretch;
+    }
+
+    .app-header .user-nav-menu .profile-trigger {
+        width: 100%;
+        padding: 5px 2px;
+    }
+
+    .app-header .user-nav-menu .profile-copy {
+        display: flex;
+    }
+
+    .app-header .user-nav-menu .profile-dropdown .dropdown-panel {
+        width: 100%;
+    }
+
+    .app-header .user-nav-menu .profile-trigger > .chevron {
+        display: none;
+    }
+}
+
+/* ---------- LAYAR KECIL ---------- */
+
+@media (max-width: 380px) {
+    .app-header .nav-wrap {
+        width: calc(100% - 24px);
+    }
+
+    .app-header .brand-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    .app-header .brand-name strong {
+        font-size: 11px;
+    }
+
+    .app-header .brand-name small {
+        font-size: 7px;
+    }
+}
+
+/* Pastikan trigger dan panel dropdown pengguna selalu berada di atas elemen halaman. */
+.app-header .nav-dropdown { z-index: 1200; }
+.app-header .dropdown-trigger,
+.app-header .profile-trigger,
+.app-header .nav-icon { pointer-events: auto; }
+
+
+/* Dropdown peminjaman dan susunan footer saat pengguna sudah login. */
+.app-header .borrowing-dropdown .dropdown-panel { min-width: 220px; }
+.app-header .borrowing-dropdown .dropdown-trigger.active { color: #1554d1; font-weight: 700; }
+.footer-grid-auth { grid-template-columns: 1.6fr 1fr 1fr; }
+@media (max-width: 760px) {
+    .footer-grid-auth { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footer-grid-auth .footer-about { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+    .footer-grid-auth { grid-template-columns: 1fr; }
+}
+
+
+/* ---------- PROFILE DROPDOWN: LOGOUT ACTION ---------- */
+.app-header .profile-panel {
+    min-width: 218px;
+    padding: 7px;
+}
+
+.app-header .profile-panel .profile-panel-heading {
+    padding: 11px 12px 12px;
+    margin: 0 0 5px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.app-header .profile-panel .profile-panel-heading strong {
+    display: block;
+    color: #25384a;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.app-header .profile-panel .profile-panel-heading small {
+    display: block;
+    margin-top: 4px;
+    color: #8a96a5;
+    font-size: 10px;
+}
+
+.app-header .profile-panel > a,
+.app-header .profile-panel .dropdown-logout button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 38px;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #4b5b6c;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 550;
+    line-height: 1.35;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease;
+}
+
+.app-header .profile-panel > a:hover {
+    background: #eff5ff;
+    color: #1554d1;
+}
+
+.app-header .profile-panel .dropdown-logout {
+    display: block;
+    margin: 5px 0 0;
+    padding-top: 5px;
+    border-top: 1px solid #edf0f5;
+}
+
+.app-header .profile-panel .dropdown-logout button {
+    color: #d04452;
+}
+
+.app-header .profile-panel .dropdown-logout button::before {
+    content: '↪';
+    display: inline-block;
+    margin-right: 9px;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.app-header .profile-panel .dropdown-logout button:hover {
+    background: #fff0f1;
+    color: #b42332;
+}
+
+.app-header .profile-panel > a:focus-visible,
+.app-header .profile-panel .dropdown-logout button:focus-visible {
+    outline: 3px solid #9bbcff;
+    outline-offset: 1px;
+}
+
+@media (max-width: 850px) {
+    .app-header .user-nav-menu .profile-panel .dropdown-logout button {
+        min-height: 40px;
+        padding-left: 12px;
+    }
+}
