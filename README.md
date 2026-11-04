@@ -1,65 +1,121 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# IoT Project Hub
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tentang Proyek
 
-## About Laravel
+**IoT Project Hub** merupakan platform berbasis web yang dikembangkan
+sebagai pusat informasi dan eksplorasi proyek Internet of Things (IoT)
+di lingkungan kampus. Platform ini dirancang untuk membantu mahasiswa
+menemukan inspirasi proyek, mengenal perangkat dan komponen yang dapat
+digunakan, serta memperoleh informasi mengenai fasilitas laboratorium
+dan prosedur peminjaman perangkat.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyek ini mengangkat tema **Platform Kolaboratif Ekosistem IoT
+Kampus**. Tema tersebut dipilih karena pengembangan proyek IoT
+membutuhkan akses terhadap referensi, perangkat, komponen, dan fasilitas
+pendukung. Melalui satu platform, informasi tersebut dapat disajikan
+dengan lebih terstruktur sehingga mahasiswa dapat mempersiapkan kegiatan
+praktikum, tugas akhir, maupun riset dan eksperimen.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tujuan Proyek
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1.  Menyediakan tempat untuk melihat dan mencari referensi proyek IoT.
+2.  Memudahkan mahasiswa mengenali kit, sensor, board, dan komponen yang
+    sesuai dengan kebutuhan proyek.
+3.  Menyajikan informasi fasilitas laboratorium, termasuk ketersediaan
+    Smart Locker.
+4.  Memberikan informasi mengenai alur dan prosedur pengajuan peminjaman
+    perangkat.
+5.  Mendukung kegiatan belajar, eksperimen, dan kolaborasi mahasiswa di
+    bidang IoT.
 
-## Learning Laravel
+## Fitur Utama
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   **Katalog Proyek:** Menampilkan berbagai referensi proyek IoT
+    beserta deskripsi dan tingkat kesulitannya.
+-   **Kit dan Komponen:** Menjadi sarana informasi mengenai perangkat
+    dan komponen untuk membuat prototipe IoT.
+-   **Informasi Fasilitas:** Menampilkan informasi fasilitas
+    laboratorium dan ketersediaan Smart Locker.
+-   **Panduan Peminjaman:** Menjelaskan tahapan penggunaan fasilitas dan
+    pengajuan peminjaman perangkat.
+-   **Akun Pengguna:** Menyediakan akses akun agar pengguna dapat
+    melanjutkan ke fitur proyek dan peminjaman.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Target Pengguna
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+Platform ini ditujukan terutama untuk mahasiswa, khususnya mahasiswa
+yang mempelajari bidang teknologi informasi, elektronika, dan Internet
+of Things. Platform juga dapat dimanfaatkan oleh pengelola laboratorium
+untuk menyampaikan informasi fasilitas dan perangkat yang tersedia.
 
-## Agentic Development
+## Dokumentasi Landing Page
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Berikut merupakan screenshot tampilan landing page IoT Project Hub yang
+telah dikembangkan.
 
-```bash
-composer require laravel/boost --dev
+### 1. Bagian Hero / Halaman Utama
 
-php artisan boost:install
-```
+Bagian pembuka landing page memperkenalkan IoT Project Hub sebagai
+portal proyek IoT kampus. Pengguna dapat langsung memilih menu untuk
+menjelajahi proyek atau melihat panduan peminjaman. Bagian ini juga
+menampilkan ringkasan informasi proyek, kompartemen locker, dan
+laboratorium.
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+![Landing page - bagian hero](screenshots/01-landing-hero.png)
 
-## Contributing
+### 2. Fitur yang Ditawarkan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Bagian ini menjelaskan manfaat utama platform, seperti akses informasi
+peminjaman, pengenalan kit dan komponen, referensi proyek, serta panduan
+alur penggunaan fasilitas.
 
-## Code of Conduct
+![Landing page - fitur utama](screenshots/02-fitur-utama.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 3. Proyek Pilihan
 
-## Security Vulnerabilities
+Bagian proyek pilihan menampilkan beberapa contoh referensi proyek IoT,
+seperti sistem deteksi banjir, integrasi lampu lalu lintas, smart
+farming, dan smart city. Pengguna dapat menjelajahi proyek untuk
+memperoleh inspirasi sebelum mengembangkan prototipe sendiri.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![Landing page - proyek pilihan](screenshots/03-proyek-pilihan.png)
 
-## License
+### 4. Alur Penggunaan Platform
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Bagian ini menjelaskan tahapan awal bagi pengguna, yaitu menemukan
+perangkat yang dibutuhkan, masuk ke akun, kemudian mengajukan peminjaman
+sesuai prosedur laboratorium.
 
-## Autentikasi Supabase di localhost
+![Landing page - alur peminjaman](screenshots/04-alur-peminjaman.png)
 
-- Isi `SUPABASE_URL` dan `SUPABASE_ANON_KEY` pada `.env` dengan nilai dari project Supabase yang sama.
-- Saat **Confirm Email** dimatikan, endpoint signup mengembalikan sesi; aplikasi akan langsung membuat sesi Laravel dan mengarahkan pengguna ke dashboard.
-- Untuk akun lama yang masih belum dikonfirmasi, isi `SUPABASE_SERVICE_ROLE_KEY` dan `SUPABASE_AUTO_CONFIRM=true` pada `.env` lokal. Kode hanya memakai service-role key di server dan hanya menjalankan auto-confirm ketika `APP_ENV=local`.
-- Setelah mengubah `.env`, jalankan `php artisan config:clear`. Jangan pernah membagikan file `.env` atau memasukkan service-role key ke kode frontend.
+### 5. Ajakan Bergabung dan Footer
+
+Pada bagian akhir landing page terdapat ajakan untuk membuat akun agar
+pengguna dapat melanjutkan ke fitur proyek dan peminjaman. Footer memuat
+deskripsi singkat platform serta tautan navigasi dan eksplorasi.
+
+![Landing page - CTA dan footer](screenshots/05-cta-dan-footer.png)
+
+## Tema Proyek Kolaboratif
+
+Tema **Platform Kolaboratif Ekosistem IoT Kampus** berfokus pada
+penyediaan ruang digital yang menghubungkan mahasiswa dengan informasi
+proyek, perangkat, komponen, dan fasilitas laboratorium. Melalui IoT
+Project Hub, mahasiswa diharapkan dapat lebih mudah menemukan ide,
+menyiapkan kebutuhan prototipe, dan mengetahui prosedur pemanfaatan
+fasilitas yang tersedia.
+
+Proyek ini juga mengangkat semangat kolaborasi karena pengembangan IoT
+tidak hanya membutuhkan kemampuan pemrograman, tetapi juga pemahaman
+perangkat keras, integrasi sistem, pengujian, dan kerja sama
+antaranggota tim. Dengan adanya platform ini, proses pencarian referensi
+dan informasi pendukung kegiatan proyek dapat dilakukan melalui satu
+tempat yang lebih mudah diakses.
+
+## Penutup
+
+IoT Project Hub diharapkan dapat menjadi media pendukung kegiatan
+pembelajaran dan pengembangan proyek IoT di lingkungan kampus. Dengan
+menggabungkan katalog referensi proyek, informasi perangkat, fasilitas
+laboratorium, dan panduan peminjaman, platform ini berupaya menciptakan
+ekosistem yang lebih terorganisasi dan mendukung inovasi mahasiswa.
