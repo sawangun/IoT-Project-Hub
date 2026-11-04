@@ -1,0 +1,7 @@
+-- DEPRECATED
+-- Skema terbaru sudah menyediakan public.orders, public.order_items,
+-- enum payment_method, fungsi create_order(), dan trigger stok/notifikasi.
+-- Aplikasi tidak lagi menggunakan tabel public.purchase_orders.
+-- Jangan jalankan SQL lama yang membuat purchase_orders.
+-- Untuk mengaktifkan fitur checkout, pastikan database sudah menjalankan
+-- database/supabase/01_schema.sql dan migration metadata Laravel.
